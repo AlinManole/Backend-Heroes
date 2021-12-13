@@ -10,11 +10,7 @@ app.use(express.json())
 app.use(morgan('tiny'))
 
 
-
-
-
 app.use("/heroes", heroes)
-
 
 
 const log = (req, res, next) => {
@@ -22,10 +18,7 @@ const log = (req, res, next) => {
   next()
 }
 
-
 app.use(log)
-
-
 
 app.listen(port, () => {
   console.log(`Server is running on port ${5000}`)
