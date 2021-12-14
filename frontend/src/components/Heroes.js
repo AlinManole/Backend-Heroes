@@ -8,7 +8,7 @@ const Heroes = () => {
         fetch(`http://localhost:5000/heroes`)
             .then((res) => res.json())
             .then((res) => setHeroes(res));
-    },[]);
+    },[heroes]);
 
     console.log(heroes)
     return (
